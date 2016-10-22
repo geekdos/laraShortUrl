@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LinksController@index');
+Route::get('/create', 'LinksController@crate');
+Route::get('/r/{$id}', 'LinksController@show');
+Route::post('/', 'LinksController@store');
